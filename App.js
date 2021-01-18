@@ -258,7 +258,7 @@ class App extends React.Component {
     formula = formula.replace("**", "*");
     formula = formula.replace("*+", "+");
     
-    let calc = math.evaluate(formula);
+    let calc = math.round(math.evaluate(formula),6);
 
     this.handleEquals(calc);
   }
